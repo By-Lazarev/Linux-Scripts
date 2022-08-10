@@ -31,7 +31,7 @@ then
 
 	if [ $1 == "-h" ]
 		then
-              	printf "I understand. You found paradise in Ubunta. You had a good trade, you made a good living. The verter protected you and there were courts of law. So you didn't need a friend like me. Now you come and say \"Don Mainone, give me instuctions.\" But you don't ask with respect. You don't offer friendship. You don't even think to call me \"Godfather.\" You come into my house on the day my daughter is to be married and you ask me to tell you that this script work with no argumets - but for what?\n"
+              	printf "I understand. You found paradise in Ubunta. You had a good trade, you made a good living. The verter protected you and there were courts of law. So you didn't need a friend like me. Now you come and say \"Don Mainone, give me instuctions.\" But you don't ask with respect. You don't offer friendship. You don't even think to call me \"Codfather.\" You come into my house on the day my daughter is to be married and you ask me to tell you that this script work with no argumets - but for what?\n"
 		else
         printf "$GREEN ---            HELLO          --- $NC\n"
         printf "To use this
