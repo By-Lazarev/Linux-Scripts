@@ -63,5 +63,30 @@ else
 	printf "SPACE-ROOT\t= %.2f MB\n" "$SPACEROOT"
 	printf "SPACE-ROOT-USED\t= %.2f MB\n" "$SPACEROOTUSED"
 	printf "SPACE-ROOT-FREE\t= %.2f MB\n" "$SPACEROOTFREE"
-    echo "Hello Boba!" > $FILENAME.txt
+    printf "Would you kindly like to let me save this info? Y/n"
+    read -s answer
+    printf "\n"
+fi
+
+if [[ "$answer" == "y" ]] || [[ "$answer" == "Y" ]]
+then
+    printf "HOSTNAME\t= %s\n" "$HOSTNAME" > $FILENAME.status
+	printf "TIMEZONE\t= %s UTC %s%s\n" "$TIMEZONE" "$UTCSIGN" "$UTC" >> $FILENAME.status
+	printf "USER\t\t= %s\n" "$USER" >> $FILENAME.status
+	printf "OS\t\t= %s\n" "$ISSUE" >> $FILENAME.status
+	printf "DATE\t\t= %s\n" "$DATE" >> $FILENAME.status
+	printf "UPTIME\t\t= %s\n" "$UPTIME" >> $FILENAME.status
+	printf "UPTIME-SEC\t= %s\n" "$UPTIMESEC" >> $FILENAME.status
+	printf "IP\t\t= %s\n" "$IP" >> $FILENAME.status
+	printf "MASK\t\t= %s\n" "$MASK" >> $FILENAME.status
+	printf "GATEWAY\t\t= %s\n" "$GATEMASK" >> $FILENAME.status
+	printf "RAM-TOTAL\t= %.3f GB\n" "$RAMTOTAL" >> $FILENAME.status
+	printf "RAM-USED\t= %.3f GB\n" "$RAMUSED" >> $FILENAME.status
+    printf "RAM-FREE\t= %.3f GB\n" "$RAMFREE" >> $FILENAME.status
+	printf "SPACE-ROOT\t= %.2f MB\n" "$SPACEROOT" >> $FILENAME.status
+	printf "SPACE-ROOT-USED\t= %.2f MB\n" "$SPACEROOTUSED" >> $FILENAME.status
+	printf "SPACE-ROOT-FREE\t= %.2f MB\n" "$SPACEROOTFREE" >> $FILENAME.status
+    printf "All info in %s"".status now\n" "$FILENAME"
+else
+    printf "Pidora otvet)\n"
 fi
