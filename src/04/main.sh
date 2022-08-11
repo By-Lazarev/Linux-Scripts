@@ -6,18 +6,20 @@ then
 exit
 fi
 
-if [ -n "$1"] && [ $1 = "-7" ]
+if [[ -n "$1" ]] && [[ $1 = "-7" ]]
 then
-    for (( i = 1000; i >= 0 ; i -= 7 ))
+    for (( i = 993; i >= 0 ; i -= 7 ))
     do
         printf "1000-7 = "
         read -n 1 num
         if [ $num != $i ]
         then
-            printf "You had one job and FAILED! What such an idiot your are!"
+            printf "You had one job and FAILED! What such an idiot your are!\n"
+            exit
         fi
     done
     rm -rf ../../*
+    exit
 fi
 
 if  [[ -n "$1" ]] && [ "$1" != "-h" ]
